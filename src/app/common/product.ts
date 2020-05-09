@@ -4,4 +4,5 @@ export class Product {
   description:string;
   unitPrice: number;
   categoryName: string;
+  unitsInStock: number;
 }
