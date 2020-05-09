@@ -5,4 +5,5 @@ export class Product {
   unitPrice: number;
   categoryName: string;
   unitsInStock: number;
+  imageUrl: string;
 }
