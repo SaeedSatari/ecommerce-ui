@@ -21,8 +21,13 @@ export class ProductService {
     return this.httpClient.get(searchUrl).pipe();
   }
 
-  getProductCategories(): Observable<ProductCategory[]>{
+  getProductCategories(): Observable<ProductCategory[]> {
     // @ts-ignore
     return this.httpClient.get(this.categoryUrl).pipe();
   }
+
+  // getProductCategories(): Observable<ProductCategory[]>{
+  //   // @ts-ignore
+  //   return this.httpClient.get(this.categoryUrl).pipe();
+  // }
 }
