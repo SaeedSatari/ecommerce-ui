@@ -6,7 +6,6 @@ import {ProductListComponent} from './components/product-list/product-list.compo
 import {HttpClientModule} from "@angular/common/http";
 import {ProductService} from "./services/product.service";
 import {RouterModule, Routes} from "@angular/router";
-import { ProductCategoryMenueComponent } from './components/product-category-menue/product-category-menue.component';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 
 const routes: Routes = [
@@ -21,7 +20,6 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductCategoryMenueComponent,
     ProductCategoryMenuComponent
   ],
   imports: [
