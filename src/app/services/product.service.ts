@@ -26,8 +26,10 @@ export class ProductService {
     return this.httpClient.get(this.categoryUrl).pipe();
   }
 
-  // getProductCategories(): Observable<ProductCategory[]>{
-  //   // @ts-ignore
-  //   return this.httpClient.get(this.categoryUrl).pipe();
-  // }
+  searchProducts(theKeyword: string): Observable<Product[]>{
+    const searchUrl = this.baseUrl + "/search/keyword?name=" + theKeyword;
+    // @ts-ignore
+    return this.httpClient.get(searchUrl).pipe();
+  }
 }
+
