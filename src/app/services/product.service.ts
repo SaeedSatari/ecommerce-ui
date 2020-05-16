@@ -31,5 +31,11 @@ export class ProductService {
     // @ts-ignore
     return this.httpClient.get(searchUrl).pipe();
   }
+
+  getProduct(theProductId: number): Observable<Product> {
+    const productUrl = this.baseUrl + "/" + theProductId;
+    // @ts-ignore
+    return this.httpClient.get(productUrl).pipe();
+  }
 }
 
