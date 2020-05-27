@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
@@ -10,7 +10,8 @@ export class CheckoutComponent implements OnInit {
 
   checkoutFormGroup: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit(): void {
     this.checkoutFormGroup = this.formBuilder.group({
@@ -18,11 +19,33 @@ export class CheckoutComponent implements OnInit {
         firstName: [''],
         lastName: [''],
         email: ['']
+      }),
+      shippingAddress: this.formBuilder.group({
+        street: [''],
+        city: [''],
+        state: [''],
+        country: [''],
+        zipCode: ['']
+      }),
+      billingAddress: this.formBuilder.group({
+        street: [''],
+        city: [''],
+        state: [''],
+        country: [''],
+        zipCode: ['']
+      }),
+      creditCard: this.formBuilder.group({
+        cardType: [''],
+        nameOnCard: [''],
+        cardNumber: [''],
+        securityCode: [''],
+        expirationMonth: [''],
+        expirationYear: ['']
       })
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     console.log(this.checkoutFormGroup.get('customer').value);
   }
 
